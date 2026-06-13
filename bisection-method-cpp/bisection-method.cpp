@@ -64,10 +64,20 @@ int main()
 
     //User input
     cout << "Enter the value of a: ";
-    cin >> a;
+    while(!(cin >> a))
+    {
+        cin.clear();
+        cin.ignore();
+        cout << "Invalid input. Enter a valid number: ";
+    }
 
     cout << "Enter the value of b: ";
-    cin >> b;
+    while(!(cin >> b))
+    {
+        cin.clear();
+        cin.ignore();
+        cout << "Invalid input. Enter a valid number: ";
+    }
 
     //Swap if b < a
     if(b < a)
